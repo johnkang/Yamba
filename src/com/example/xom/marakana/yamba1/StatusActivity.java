@@ -1,7 +1,6 @@
 package com.example.xom.marakana.yamba1;
 
 import winterwell.jtwitter.Twitter;
-import winterwell.jtwitter.Status;
 import winterwell.jtwitter.TwitterException;
 
 import android.os.AsyncTask;
@@ -57,7 +56,7 @@ public class StatusActivity extends Activity implements OnClickListener {
 		@Override
 		protected String doInBackground(String... params) {
 			try {
-				winterwell.jtwitter.Status status = mTwitter.updateStatus(params[0]);
+				Twitter.Status status = mTwitter.updateStatus(params[0]);
 				return status.text;
 			}
 			catch(TwitterException e) {
